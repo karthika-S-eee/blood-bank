@@ -16,11 +16,17 @@ const app = express();
 
 //middlewares
 app.use(express.json());
-app.use(cors());
+// CORS configuration
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://blood-bank-8toz.onrender.com"], // allow your frontend domains
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true, // needed if you use cookies or auth headers
+  })
+);
 app.use(morgan("dev"));
 
 
-app.use(cors());
 
 
 //routes
