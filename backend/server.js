@@ -19,6 +19,13 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+
+app.use(cors({
+  origin: ["http://localhost:3000", "https://blood-bank-8toz.onrender.com"],
+  credentials: true, // if you use cookies/auth
+}));
+
+
 //routes
 // 1 test route
 app.use("/api/v1/test", require("../backend/routes/testRoutes"));
