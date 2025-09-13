@@ -20,10 +20,7 @@ app.use(cors());
 app.use(morgan("dev"));
 
 
-app.use(cors({
-  origin: ["http://localhost:3000", "https://blood-bank-8toz.onrender.com"],
-  credentials: true, // if you use cookies/auth
-}));
+app.use(cors());
 
 
 //routes
