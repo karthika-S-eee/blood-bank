@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import InputType from "./../Form/InputType";
-import API from "./../../../services/API";
+import InputType from "../Form/InputType";
+import API from "../../../services/API";
 
 const Modal = () => {
   const [inventoryType, setInventoryType] = useState("in");

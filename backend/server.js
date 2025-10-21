@@ -19,7 +19,7 @@ app.use(express.json());
 // CORS configuration
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://blood-bank-2iko.onrender.com/"], // allow your frontend domains
+    origin: ["http://localhost:3000", "https://blood-bank-2iko.onrender.com"], // allow your frontend domains
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true, // needed if you use cookies or auth headers
   })
